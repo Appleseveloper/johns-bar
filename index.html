@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to John's Bar</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order Online</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <h3>ΚΑΦΕΔΕΣ</h3>
+        <div class="menu-item" data-name="Ελληνικός μονός" data-price="1">
+            <p>Ελληνικός μονός - €1.00</p>
+            <button onclick="addToOrder('Ελληνικός μονός', 1)">Order</button>
+        </div>
+        <div class="menu-item" data-name="Ελληνικός διπλός" data-price="2">
+            <p>Ελληνικός διπλός - €2.00</p>
+            <button onclick="addToOrder('Ελληνικός διπλός', 2)">Order</button>
+        </div>
+        <h3>ΑΝΑΨΥΚΤΙΚΑ</h3>
+        <div class="menu-item" data-name="Coca Cola" data-price="2">
+            <p>Coca Cola / Fanta / Sprite - €2.00</p>
+            <button onclick="addToOrder('Coca Cola', 2)">Order</button>
+        </div>
+    </section>
+    
+    <section id="order">
+        <h2>Your Order</h2>
+        <ul id="order-list"></ul>
+        <p>Total: €<span id="total">0</span></p>
+        <button onclick="submitOrder()">Submit Order</button>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@johnsbar.com</p>
+        <p>Phone: +123 456 789</p>
+    </section>
+</body>
+</html>
